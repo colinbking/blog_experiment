@@ -1,7 +1,7 @@
 import React from 'react'
 import Layout from '../components/layout'
 import Sidebar from '../components/Sidebar'
-import { graphql } from 'gatsby'
+import { graphql, Link } from 'gatsby'
 import SEO from '../components/seo'
 import { Badge, Card, CardBody, CardSubtitle, Row, Col } from 'reactstrap'
 import Img from 'gatsby-image'
@@ -27,15 +27,14 @@ const SinglePost = ({ data }) => {
                                                         <ul className = "post-tags">
                                                                 {post.tags.map(tag => (
                                                                 <li key={tag}>
-                                                                        <Link to={`/tag/$(slugify(tag)}`}>
+                                                                        <Link to={`/tag/${slugify(tag)}`}>
                                                                                 <Badge color = "primary">{tag}</Badge>
                                                                         </Link>
 
-                                                                </li>))}
+                                                                </li>
+                                                                ))}
                                                         </ul>
-                                            </CardBody>
-
-                                                
+                                            </CardBody>   
                                         </Card>
                                 </Col>
                                 <Col md="3">
@@ -43,9 +42,7 @@ const SinglePost = ({ data }) => {
                                 </Col>
                         </Row>
                 </Layout>
-                <div>
 
-                </div>
         )
         
 }

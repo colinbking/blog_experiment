@@ -1,11 +1,5 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/node-apis/
- */
-
-// You can delete this file if you're not using it
 const { slugify } = require('./src/util/utilityFunctions');
+const path = require('path')
 
 exports.onCreateNode = ({ node, actions }) => {
         const { createNodeField } = actions
@@ -32,7 +26,6 @@ exports.createPages = ({ actions, graphql }) => {
                                 node{
                                         frontmatter{
                                                 author
-                                                tags
                                         }
                                         fields{
                                                 slug
@@ -40,14 +33,16 @@ exports.createPages = ({ actions, graphql }) => {
                                 }
                         }
                 }
-        }`).then(res => {
+        }
+         `).then(res => {
                 if(res.errors) return Promise.reject(res.errors)
-                const posts = res.data.allMarkdownREmark.edges
+                const posts = res.data.allMarkdownRemark.edges
                 posts.forEach(({node}) => {
                         createPage({
                                 path: node.fields.slug,
                                 component: singlePostTemplate, 
                                 context: {
+                                        // Passing slug for template 
                                         slug: node.fields.slug
                                 }
                         })

@@ -71,7 +71,6 @@ const sidebarQuery = graphql`
                                         id
                                         frontmatter {
                                                 title
-                                                path
                                                 image {
                                                         childImageSharp{
                                                                 fluid(maxWidth: 300) {
