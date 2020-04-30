@@ -11,11 +11,9 @@ import { slugify } from '../util/utilityFunctions'
 const SinglePost = ({ data }) => {
         const post = data.markdownRemark.frontmatter
         return (
-                <Layout>
+                <Layout pageTitle = {post.title}>
                         <SEO title={post.title}/>
                         <h1>{post.title}</h1>
-                        <Row>
-                                <Col md="9">
                                         <Card>
                                                 <Img className="card-image-top" fluid={post.image.childImageSharp.fluid}/>
                                                 <CardBody>
@@ -36,11 +34,7 @@ const SinglePost = ({ data }) => {
                                                         </ul>
                                             </CardBody>   
                                         </Card>
-                                </Col>
-                                <Col md="3">
-                                        <Sidebar/>
-                                </Col>
-                        </Row>
+
                 </Layout>
 
         )

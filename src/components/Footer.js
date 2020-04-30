@@ -32,11 +32,11 @@ const Footer = () => (
                         </li>
                         <li>
                                 <a 
-                                href = "https://www.google.com" 
+                                href = "mailto:cbk1@rice.edu"
                                 target = "_blank" 
                                 rel="noopener noreferrer" 
                                 className="google">
-                                        <i className = "fab fa-google fa-2x"/>
+                                        <i className = "far fa-envelope fa-2x"/>
                                 </a>
                         </li>
                         <li>

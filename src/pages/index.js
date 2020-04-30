@@ -12,11 +12,8 @@ import { Row, Col } from 'reactstrap';
 
 
 const IndexPage = () => (
-  <Layout>
+  <Layout pageTitle="Colin's Blog">
     <SEO title="Home" keywords ={['gatsby', 'application', 'react']}/>
-    <h1>Home Page</h1>
-    <Row>
-            <Col md = "9">
                 <StaticQuery query = {indexQuery} render={data =>{
                 return (
                         <div>
@@ -35,18 +32,13 @@ const IndexPage = () => (
                         </div>
                 )
                         }}/>
-            </Col>
-            <Col md = "3">
-                    <Sidebar/>
-                        
-            </Col>
-    </Row>
+        
   </Layout>
 );
 
 const indexQuery = graphql`
   query {
-    allMarkdownRemark(sort: {fields: [frontmatter___date], order: DESC}) {
+    allMarkdownRemark(sort: {fields: [frontmatter___date], order: DESC}, filter: {frontmatter: {show: {eq: true}}}) {
       edges {
         node {
           id

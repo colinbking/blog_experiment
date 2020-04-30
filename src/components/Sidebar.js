@@ -63,7 +63,7 @@ const Sidebar = () => (
 const sidebarQuery = graphql`
         query sidebarQuery {
                 allMarkdownRemark(
-                        sort: {fields: [frontmatter___date], order: DESC}
+                        sort: {fields: [frontmatter___date], order: DESC} , filter: {frontmatter: {show: {eq: true}}},
                         limit: 3
                 ) {
                         edges{
