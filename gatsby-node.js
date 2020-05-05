@@ -105,13 +105,15 @@ exports.createPages = ({ actions, graphql }) => {
                         console.log("returned bc first\n")
                         return}
                 // create page for the nth page
+                console.log(numberOfPages.toString)
                 createPage({
                         path: `/page/${currentPage}`,
                         component: templates.postList,
                         context: {
                                 limit: postsPerPage, 
                                 skip: idx * postsPerPage, // how many posts to skip for displaying, based on page 
-                                currentPage
+                                currentPage,
+                                numberOfPages
 
                         }
 

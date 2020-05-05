@@ -26,7 +26,7 @@ const Header = ({ siteTitle }) => {
     <div>
       <Navbar fixed = "waterfall hideTop" light expand="sm">
         <div className="container">
-        <NavbarBrand href="/">Colin's Blog</NavbarBrand>
+        <NavbarBrand href="/">thesunnysideup</NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
