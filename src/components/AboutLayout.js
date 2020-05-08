@@ -14,7 +14,7 @@ import Footer from "./Footer"
 import '../styles/index.scss'
 import {Row, Col, Card, CardTitle, CardBody, Form, FormGroup, Input} from 'reactstrap'
 import Sidebar from"./Sidebar"
-// import Mailform from "./Mailform"
+import Mailform from "./Mailform"
 
 const AboutLayout = ({ children, pageTitle }) => { //props.pageTitle
   const data = useStaticQuery(graphql`
@@ -44,7 +44,7 @@ const AboutLayout = ({ children, pageTitle }) => { //props.pageTitle
               </Row>
               <Row>
                       <Col md="12">
-                      {/* <Mailform/> */}
+                      <Mailform/>
                       </Col>
               </Row>
       </div>
