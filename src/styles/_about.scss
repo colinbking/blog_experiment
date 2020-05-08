@@ -1,4 +1,53 @@
-.experience{
-        display: inline;
-        vertical-align: middle;
+.about-page {
+
+        background-color: $white;
+              
+                .about-social-links {
+                  text-align: center;
+              
+                  ul.social-links-list {
+                    li {
+                      margin-right: 25px;
+                      display: inline-block;
+              
+                      a {
+                        color: $dark-gray;
+              
+                        &.instagram:hover {
+                          color: #e95950;
+                        }
+                        &.yelp:hover {
+                              color: rgb(211, 35, 35);
+                        }
+                        &.github:hover {
+                          color: rgb(33, 31, 31);
+                        }
+                        &.facebook:hover {
+                          color: rgb(66, 103, 178);
+                        }
+                        &.twitter:hover {
+                          color: rgb(56, 161, 243);
+                        }
+                        &.google:hover {
+                          color: rgb(221, 75, 57);
+                        }
+                        &.linkedin:hover {
+                          color: rgb(0, 119, 181);
+                        }
+                      }
+                    }
+                  }
+                }
+              
+              
+
+        .experience{
+                display: inline;
+                vertical-align: middle;
+        }
+        
+        p {
+                font-size: 30px;
+        }
 }
+

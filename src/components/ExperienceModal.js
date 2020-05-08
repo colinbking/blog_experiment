@@ -20,7 +20,7 @@ const ExperienceModal = (props) => {
 
   return (
     <div>
-      <Button color="light" onClick={toggle}><img src={ModalImage} width = "138" height ="138"></img></Button>
+      <Button color="light" onClick={toggle}><img src={ModalImage} width = "195" height ="195"></img></Button>
       <Modal isOpen={modal} toggle={toggle} className={className}>
         <ModalHeader toggle={toggle}><h4>{ModalTitle}</h4><h5>{ModalSubtitle}</h5></ModalHeader>
         <ModalBody>

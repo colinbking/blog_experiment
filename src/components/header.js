@@ -1,6 +1,7 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
-import React, { useState } from 'react';
+import React, { useState } from 'react'
+import Img from 'gatsby-image'
 import {
   Collapse,
   Navbar,
@@ -26,23 +27,22 @@ const Header = ({ siteTitle }) => {
     <div>
       <Navbar fixed = "waterfall hideTop" light expand="sm">
         <div className="container">
-        <NavbarBrand href="/">thesunnysideup</NavbarBrand>
+        <NavbarBrand href="/"><img height="50px" src="https://i.imgur.com/UUPHFxy.png" style={{paddingBottom: "4px"}}></img></NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
-          <Nav className="mr-auto" navbar>
-            <NavItem>
-              <NavLink href="/team/">Team</NavLink>
-            </NavItem>
+          <Nav className="ml-auto" navbar>
             <NavItem>
               <NavLink href="/about/">About</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="/tags/">Tags</NavLink>
+              <NavLink href="/tags/">Topics</NavLink>
             </NavItem>
 
             
             <NavItem>
-              <NavLink href="https://github.com/colinbking">GitHub</NavLink>
+              <NavLink href = "mailto:cbk1@rice.edu"
+                                target = "_blank" 
+                                rel="noopener noreferrer" >Contact</NavLink>
             </NavItem>
             <UncontrolledDropdown nav inNavbar>
               <DropdownToggle nav caret>
@@ -62,7 +62,7 @@ const Header = ({ siteTitle }) => {
               </DropdownMenu>
             </UncontrolledDropdown>
           </Nav>
-          <NavbarText>Simple Text</NavbarText>
+          {/* <NavbarText>Simple Text</NavbarText> */}
         </Collapse>
         </div>
         

@@ -1,9 +1,10 @@
 import React from "react"
 // import { Link } from "gatsby"
 
-import Layout from "../components/layout"
+import AboutLayout from "../components/AboutLayout"
 import SEO from "../components/seo"
 import Resume from '../components/resume.pdf'
+import Img from 'gatsby-image'
 import Experience from '../components/ExperienceModal.js'
 
 import {
@@ -13,20 +14,72 @@ import {
       
 
 const AboutPage = () => (
-  <Layout>
+<div className="about-page">
+  <AboutLayout>
     <SEO title="About" keywords ={['gatsby', 'application', 'react']}/>
     
     <div>
-      <Jumbotron>
-        <h1 className="display-4">Hi, I'm Colin, creator of thesunnysideup.</h1>
-        <p> This is my personal site, built using Gatsby JS, made to hold my thoughts and ideas. 
-        It also serves as a page to point people (especially recruiters) to if they want to learn more about me.
-         thesunnysideup holds my favorite recipies and workouts, as well as some random thoughts and musings of mine. 
-         </p>
-         <p classname="lead">Scroll down to learn more about me as a professional, or take a look at my <a href={Resume} target="_blank">resume</a> </p>
-    
+      <Jumbotron style={{backgroundColor: "#fbf7ff"}}>
+        <div className="top-jumbo"> 
+        <h1 className="display-4"> Hi, I'm Colin.</h1>
+                <Row>
+                        <Col sm="1"></Col>
+                <Col sm ="5">
+                <div className="lead-text">
+                        <p classname ="lead">
+                                <br/> thesunnysideup is a website I built using Gatsby JS, made to hold my thoughts and ideas. 
+                        It also serves as a page to point people (especially recruiters) to if they want to learn more about me.
+                        This website holds my favorite recipies and workouts, as well as some random thoughts and musings of mine. 
+                        </p>
+                        <h4 classname="lead">Scroll down to learn more about me as a professional, or feel free to take a look at my <a href={Resume} target="_blank">resume</a>. </h4>
+                </div>
+                </Col>
+                <Row>
+                        <img style={{position: "absolute", paddingBottom: "300px", marginBottom: "300px", top: "5px"}} height="870px" src="https://i.imgur.com/BQwxyQh.png"></img>
+                                <div className = "about-social-links" style={{display:"flex", verticalAlign: "middle", paddingTop: "10px"}}>
+                                        <ul className="about-social-links-list" style={{ position: "absolute", display:"inline", justifyContent: 'right', paddingLeft: "375px", paddingTop: "20px", paddingBottom: "auto", verticalAlign: "middle"}}>
+                                                <li>
+                                                        <a 
+                                                        href = "https://www.github.com/colinbking" 
+                                                        target = "_blank" 
+                                                        rel="noopener noreferrer" 
+                                                        className="github">
+                                                                <i className = "fab fa-github fa-3x"/>
+                                                        </a>
+                                                </li>
+                                                <li><br></br></li>
 
-      </Jumbotron>
+                                                <li>
+                                                        <a 
+                                                        href = "https://www.linkedin.com/in/colinbking" 
+                                                        target = "_blank" 
+                                                        rel="noopener noreferrer" 
+                                                        className="linkedin">
+                                                                <i className = "fab fa-linkedin fa-3x"/>
+                                                        </a>
+                                                </li>
+                                                <li><br></br></li>
+
+                                                <li>
+                                                        <a 
+                                                        href = "mailto:cbk1@rice.edu"
+                                                        target = "_blank" 
+                                                        rel="noopener noreferrer" 
+                                                        className="google">
+                                                                <i className = "far fa-envelope fa-3x"/>
+                                                        </a>
+                                                </li>
+                
+                                        </ul>
+                                        
+                                </div>
+                </Row>
+
+                </Row>
+
+        </div>
+</Jumbotron>
+
     </div>
 
         <br></br>
@@ -34,8 +87,15 @@ const AboutPage = () => (
         
         {/* Exp  */}
         <div>
-        <h2> Work Experience</h2>
-        <div className = "experience">
+        <h1>Work Experience</h1>
+        <h6 style ={{
+                textAlign: "center",
+                padding: "1px"
+        }}>(Click to read more about an experience)</h6>
+
+        <div className = "experience" style ={{
+                display: "inline", verticalAlign: "middle"
+        }}>
                 <Col sm="12" xs="auto">
                         <Row xs="auto" className = "experience"> 
                                 <Experience 
@@ -43,8 +103,8 @@ const AboutPage = () => (
                                         ModalTitle="Software Engineer Intern"
                                         ModalSubtitle="June 2020 - August 2020"
                                         ModalText="During my time at APC, I developed and
-                                        implemented a chemical batch treatment plan in the
-                                        Delaware Basin to save the company over $2 MM annually."
+                                        implemented a chemical batch 
+                                        treatment plan in the Delaware Basin to save the company over $2 MM annually."
                                         ModalImage="https://www.maleon.com/wp-content/uploads/cdk-logo.png"
                                         >
                                 </Experience>
@@ -66,7 +126,7 @@ const AboutPage = () => (
                                 ModalText="During my time at APC, I developed and
                                 implemented a chemical batch treatment plan in the
                                 Delaware Basin to save the company over $2 MM annually."
-                                ModalImage="http://localhost:8000/static/a41cdd85be97483ac1dd4c6860d87853/a5de4/Ricelogo.jpg"
+                                ModalImage="https://i.imgur.com/8BJ5RZy.jpg"
                                 >
                                 </Experience>
                         
@@ -98,30 +158,15 @@ const AboutPage = () => (
         <hr></hr>
         <br></br>
 
-        {/* Skills  */}
-        <div>
-        <h2> Skills</h2>
-        <Row>
-                <Col><h3>Python</h3></Col>
-                <Col><h3>Java</h3></Col>
-                <Col><h3>C</h3></Col>
-                <Col><h3>SQL</h3></Col>
-                <Col><h3>MATLAB</h3></Col>
-                <Col><h3>AWS (EC2)</h3></Col>
-                <Col><h3>Apache Spark</h3></Col>
 
-        </Row>
-
-        </div>
-        <hr></hr>
-        <br></br>
 
 
         {/* Projects  */}
 
         <div>
-                <h2> Check out some of my favorite projects</h2>
-                I've done a few hackathons (and even won a few!). Feel free to a look at my <a href = "http://github.com/colinbking" target="_blank">github</a>  for more of my work.
+                <h1> Projects </h1>
+                <h3> I take my favorite ideas and develop them into real applications with friends. </h3>
+                <Col>                <p> I've also participated in a few hackathons/datathons with these ideas (and even won a few!). Feel free to a look at my <a href = "http://github.com/colinbking" target="_blank">github</a>  for more of my work.</p></Col>
                 <br></br>
                 <div>
                         <Row>
@@ -129,32 +174,41 @@ const AboutPage = () => (
                         <Card>
                                 <CardImg top width="5%" src="https://github.com/michaelsprintson/me.nu/blob/tim/menu_read/static/images/menuLogo.png?raw=true" alt="Card image cap" />
                                 <CardBody>
-                                <CardTitle>Me.nu</CardTitle>
-                                <CardSubtitle>Card subtitle</CardSubtitle>
-                                <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
-                                <Button>Button</Button>
+                                <CardTitle><h3 style={{textAlign: "left"}}>Me.nu</h3></CardTitle>
+                                <CardSubtitle><h6 style={{marginTop:0}}>HackRice 9 — First Place Overall, Best Use of Data Science</h6></CardSubtitle>
+                                <CardText>Using a predictive model that draws from existing reviews on Yelp and Google, as well as
+                                        your own preferences and past meals to provide optimal menu reccomendations at any restuarant. Boasts an 
+                                        easy to use interface that uses OCR via Google Vision to parse menus. 
+                                </CardText>
+                                <Button href="http://www.google.com" target="_blank">Explore on Github</Button>
                                 </CardBody>
                         </Card>
                         </Col>
                         <Col sm="4">
                         <Card>
-                                <CardImg top width="5%" src="https://github.com/michaelsprintson/me.nu/blob/tim/menu_read/static/images/menuLogo.png?raw=true" alt="Card image cap" />
+                                <CardImg top width="5%" src="http://localhost:8000/static/4cfdf9e1086d6629d25281e42121a11b/df997/test.png" alt="Card image cap" />
                                 <CardBody>
-                                <CardTitle>Me.nu</CardTitle>
-                                <CardSubtitle>Card subtitle</CardSubtitle>
-                                <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
-                                <Button>Button</Button>
+                                <CardTitle><h3 style={{textAlign: "left"}}>R.C.E. Analytics</h3></CardTitle>
+                                <CardSubtitle><h6 style={{marginTop:0}}>Rice Datathon 2020 — First Place Overall</h6></CardSubtitle>
+                                <CardText>A data pipeline and presentation that reveals key statistics about Rice's Course Evaluation (RCE) Data to students, professors, and the administration. 
+                                        Implementing a Naive Bayesian Classifier to gauge student happiness and effectiveness of courses, orders course comments
+                                        by helpfullness, and reveals the most influential aspects of a curriculum to the professors.
+                                </CardText>
+                                <Button href="https://github.com/colinbking/riceDatathon2020" target="_blank">Explore on GitHub</Button>
                                 </CardBody>
                         </Card>
                         </Col>
                         <Col sm="4">
                         <Card>
-                                <CardImg top width="5%" src="https://github.com/michaelsprintson/me.nu/blob/tim/menu_read/static/images/menuLogo.png?raw=true" alt="Card image cap" />
+                                <CardImg top width="5%" src="https://github.com/colinbking/aware/raw/master/app/src/main/res/mipmap-hdpi/car_icon.png" alt="Card image cap" />
                                 <CardBody>
-                                <CardTitle>Me.nu</CardTitle>
-                                <CardSubtitle>Card subtitle</CardSubtitle>
-                                <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
-                                <Button>Button</Button>
+                                <CardTitle><h3 style={{textAlign: "left"}}>Aware</h3></CardTitle>
+                                <CardSubtitle><h6 style={{marginTop:0}}>PennApps XX</h6></CardSubtitle>
+                                <CardText>Protecting drivers and reducing unnecessary accidents by alerting drivers of nearby drivers' intentions. 
+                                        Respond and send requests to change lanes, pass slow cars, merge, and more, with a hands free interface using
+                                        speech to text technology.
+                                        </CardText>
+                                <Button href="https://github.com/colinbking/aware"  target="_blank">Explore on Github</Button>
                                 </CardBody>
                         </Card>
                         </Col>
@@ -162,6 +216,38 @@ const AboutPage = () => (
                 </div>
 
     <div>
+            <hr></hr>
+            <br></br>
+
+    {/* Skills  */}
+        <div padding="100px">
+                <h1> Skills</h1>
+                <div>
+                        <p>
+                        <Row>
+                        <Col sm={{ size: 'auto', offset: 3 }} >
+                                <Row><h3>Python</h3></Row>
+                                <Row><h3>Java</h3></Row>
+                                <Row><h3>C</h3></Row>
+                                <Row><h3>SQL</h3></Row>
+                                <Row><h3>MATLAB</h3></Row>
+                                <Row><h3>AWS (EC2)</h3></Row>
+                                <Row><h3>Apache Spark</h3></Row>
+                                <Row><h3>HTML/CSS</h3></Row>
+                        </Col>
+                        <Col sm={{ size: 'auto', offset: 2 }} >
+                                <Row><h3>English (Native)</h3></Row>
+                                <Row><h3>Chinese (Native)</h3></Row>
+                                <Row><h3>Korean (Beginnner)</h3></Row>
+
+                        </Col>  
+                        </Row>
+
+                        </p>
+                </div>
+        </div>
+        <hr></hr>
+        <br></br>
 
             {/* Other Activities  */}
         <div>
@@ -177,7 +263,8 @@ const AboutPage = () => (
 
     
 
-  </Layout>
+  </AboutLayout>
+  </div>
 )
 
 export default AboutPage

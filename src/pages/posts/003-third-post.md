@@ -13,4 +13,4 @@ This is the third recipe.
 This is the third recipe.
 This is the third recipe.
 This is the third recipe.
-![Hello this is an image](http://localhost:8000/static/91f8a4dfc6dd9382de2097af7d04c090/67974/cake.png "Cake yo")
+![Hello this is an image](https://i.imgur.com/h7Wi8iK.png "Cake yo")

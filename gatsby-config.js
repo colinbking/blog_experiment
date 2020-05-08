@@ -15,6 +15,13 @@ module.exports = {
             },
           },
           {
+                resolve: 'gatsby-plugin-mailchimp',
+                options: {
+                    endpoint: 'https://rice.us8.list-manage.com/subscribe/post?u=bad8fdcb1f4aa391b9d11815b&amp'
+                }              // add your MC list endpoint here; see instructions below
+          },
+          
+          {
               resolve: `gatsby-source-filesystem`,
               options: {
                 name: `pages`,
@@ -34,7 +41,7 @@ module.exports = {
               background_color: `#663399`,
               theme_color: `#663399`,
               display: `minimal-ui`,
-              icon: `src/images/jin.png`, // This path is relative to the root of the site.
+              icon: `src/images/egg-icon.png`, // This path is relative to the root of the site.
             },
           },
           // this (optional) plugin enables Progressive Web App + Offline functionality
