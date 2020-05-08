@@ -12,8 +12,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Header from "./header"
 import Footer from "./Footer"
 import '../styles/index.scss'
-import {Row, Col, Card, CardTitle, CardBody, Form, FormGroup, Input} from 'reactstrap'
-import Sidebar from"./Sidebar"
+import {Row, Col} from 'reactstrap'
 import Mailform from "./Mailform"
 
 const AboutLayout = ({ children, pageTitle }) => { //props.pageTitle
