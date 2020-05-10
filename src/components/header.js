@@ -27,7 +27,7 @@ const Header = ({ siteTitle }) => {
     <div>
       <Navbar fixed = "waterfall hideTop" light expand="sm">
         <div className="container">
-        <NavbarBrand href="/"><img height="50px" src="https://i.imgur.com/UUPHFxy.png" style={{paddingBottom: "4px"}}></img></NavbarBrand>
+        <NavbarBrand href="/"><img height="60px" src="https://i.imgur.com/UUPHFxy.png" style={{paddingBottom: "4px"}}></img></NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="ml-auto" navbar>

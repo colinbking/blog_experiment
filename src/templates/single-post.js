@@ -20,9 +20,8 @@ const SinglePost = ({ data, pageContext }) => {
         }
 
         return (
-                <Layout pageTitle = {post.title}>
+                <Layout >
                         <SEO title={post.title}/>
-                        <h1>{post.title}</h1>
                                         <Card>
                                                 <Img className="card-image-top" fluid={post.image.childImageSharp.fluid}/>
                                                 <CardBody>

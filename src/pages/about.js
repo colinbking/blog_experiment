@@ -19,9 +19,9 @@ const AboutPage = () => (
     <SEO title="About" keywords ={['gatsby', 'application', 'react']}/>
     
     <div>
-      <Jumbotron style={{backgroundColor: "#fbf7ff"}}>
+      <Jumbotron >
         <div className="top-jumbo"> 
-        <h1 className="display-4"> Hi, I'm Colin.</h1>
+                <h1 className="display-4"> Hi, I'm Colin.</h1>
                 <Row>
                         <Col sm="1"></Col>
                 <Col sm ="5">
@@ -86,67 +86,78 @@ const AboutPage = () => (
 
         
         {/* Exp  */}
-        <div>
+        <div className="work">
         <h1>Work Experience</h1>
         <h6 style ={{
                 textAlign: "center",
                 padding: "1px"
         }}>(Click to read more about an experience)</h6>
 
-        <div className = "experience" style ={{
-                display: "inline", verticalAlign: "middle"
-        }}>
-                <Col sm="12" xs="auto">
-                        <Row xs="auto" className = "experience"> 
+        <div className="work-content">
+                <Col sm="12" xs="auto" className="exp-col" >
+        
+                        <Row xs="auto" className="exp-row" style={{display: "flex",
+                                verticalAlign: "middle",
+                                padding: "5px",
+                                alignItems: "center",
+                                justifyContent: "center"}} >> 
+
                                 <Experience 
+                                className ="experience"
                                         buttonLabel="CDK Global" 
-                                        ModalTitle="Software Engineer Intern"
+                                        ModalTitle="Software Engineering Intern"
                                         ModalSubtitle="June 2020 - August 2020"
-                                        ModalText="During my time at APC, I developed and
-                                        implemented a chemical batch 
-                                        treatment plan in the Delaware Basin to save the company over $2 MM annually."
+                                        ModalText="Incoming Software Engineering Intern for the Summer of 2020"
                                         ModalImage="https://www.maleon.com/wp-content/uploads/cdk-logo.png"
                                         >
+
                                 </Experience>
+
                                 <Experience 
+                                
+                                className ="experience"
                                         buttonLabel="Anadarko Petroleum Company" 
                                         ModalTitle="Anadarko Petroleum Company (APC)"
                                         ModalSubtitle="May 2019 - August 2019"
                                         ModalText="During my time at APC, I developed and
-                                        implemented a chemical batch treatment plan in the
-                                        Delaware Basin to save the company over $2 MM annually."
+                                        implemented a new chemical batch treatment protocol in the
+                                        Delaware Basin to save the company over $2 MM annually. I also helped transition
+                                        the company to an online platform for scheduling and tracking batch treatments"
                                         ModalImage="https://cdn.freebiesupply.com/logos/large/2x/anadarko-petroleum-logo-png-transparent.png"
                                         >
                                 </Experience>
 
                                 <Experience className = "experience"
                                 buttonLabel="Rice University" 
-                                ModalTitle="Teaching Assistant, Computer Science Dept."
+                                ModalTitle="Teaching Assistant"
                                 ModalSubtitle="September 2019 - Present"
-                                ModalText="During my time at APC, I developed and
-                                implemented a chemical batch treatment plan in the
-                                Delaware Basin to save the company over $2 MM annually."
+                                ModalText="I served as a teaching assistnant for the courses Computational Programming for
+                                 Chemical Engineering, Fundamentals of Computer Engineering, and Introduction to Program Design. 
+                                 For all of the classes, I assisted with students' coding projects, taught 
+                                 concepts, and graded code submissions."
                                 ModalImage="https://i.imgur.com/8BJ5RZy.jpg"
                                 >
                                 </Experience>
                         
                                 <Experience 
+                                
+                                className ="experience"
                                 buttonLabel="Baylor College of Medicine" 
-                                ModalTitle="Anadarko Petroleum Company (APC)"
-                                ModalText="During my time at APC, I developed and
-                                implemented a chemical batch treatment plan in the
-                                Delaware Basin to save the company over $2 MM annually."
-                                ModalImage="https://garp.research.bcm.edu/images/BaylorCollegeOfMedicine.png"
+                                ModalTitle="Lab Assistant in the Bissig Lab"
+                                ModalText="As an assistant in Dr. Karl Dimiter Bissig's cell and gene therapy lab,
+                                I helped construct synthesize gRNA constructs to target genes Agt and DDC, as part of the lab's
+                                focus on metabolic pathway reprogramming."
+                                ModalImage="https://upload.wikimedia.org/wikipedia/commons/5/5d/Baylor_College_of_Medicine_Logo.png"
                                 >
                                 </Experience>
              
                                 <Experience 
+                                
+                                className ="experience"
                                 buttonLabel="East West Tea" 
-                                ModalTitle="Anadarko Petroleum Company (APC)"
+                                ModalTitle="Boba Chef, Cashier"
                                 ModalSubtitle="September 2018 - Present"
-                                ModalText="During my time at APC, I developed and
-                                implemented a chemical batch treatment plan in the
-                                Delaware Basin to save the company over $2 MM annually."
+                                ModalText="In my free time, I work at one of the only student owned and led businesses at Rice University. I've cooked for and helped to organize events that served over 200 people. "
                                 ModalImage="https://images.squarespace-cdn.com/content/58559451725e25a3d8206027/1482003769935-DKI42LTKUTYLDC49ZOOF/Logo+no+background.png?content-type=image%2Fpng"
                                 >
                                 </Experience>
@@ -180,7 +191,7 @@ const AboutPage = () => (
                                         your own preferences and past meals to provide optimal menu reccomendations at any restuarant. Boasts an 
                                         easy to use interface that uses OCR via Google Vision to parse menus. 
                                 </CardText>
-                                <Button href="http://www.google.com" target="_blank">Explore on Github</Button>
+                                <Button href="http://www.github.com/colinbking/me.nu" target="_blank">Explore on Github</Button>
                                 </CardBody>
                         </Card>
                         </Col>

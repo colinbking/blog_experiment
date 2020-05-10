@@ -18,7 +18,7 @@ const IndexPage = () => {
   const postsPerPage = 3;
   let numberOfPages;
   return (
-  <Layout pageTitle="thesunnysideup">
+  <Layout pageTitle="Home">
     <SEO title="Home" keywords ={['gatsby', 'application', 'react']}/>
                 <StaticQuery query = {indexQuery} render={data =>{
                 numberOfPages = Math.ceil(data.allMarkdownRemark.totalCount / postsPerPage)

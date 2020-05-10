@@ -2,23 +2,10 @@ import React from 'react'
 import { Card, CardTitle, CardBody, Form, FormGroup, Input} from 'reactstrap'
 import { graphql, StaticQuery, Link } from 'gatsby'
 import Img from 'gatsby-image'
+import Mailform from '../components/Mailform'
 const Sidebar = () => (
         <div>
-                <Card>
-                        <CardBody>
-                                <CardTitle className="text-center text-uppercase mb-3">
-                                        Newsletter
-                                </CardTitle>
-                                <Form className="text-center">
-                                        <FormGroup>
-                                                <Input type="email" name="email" placeholder = "Your email address"/>
-                                        </FormGroup>
-                                        <button className = "btn btn-outline-success text-uppercase">
-                                                Subscribe
-                                        </button>
-                                </Form>
-                        </CardBody>
-                </Card>
+               <Mailform/>
                 <Card>
                         <CardBody>
                                 <CardTitle className = "text-center text-uppercase">
