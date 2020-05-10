@@ -28,7 +28,7 @@ const AboutPage = () => (
                 <div className="lead-text">
                         <p classname ="lead">
                                 <br/> thesunnysideup is a website I built using Gatsby JS, made to hold my thoughts and ideas. 
-                        It also serves as a page to point people (especially recruiters) to if they want to learn more about me.
+                        It also serves as a page to point people to if they want to learn more about me.
                         This website holds my favorite recipies and workouts, as well as some random thoughts and musings of mine. 
                         </p>
                         <h4 classname="lead">Scroll down to learn more about me as a professional, or feel free to take a look at my <a href={Resume} target="_blank">resume</a>. </h4>
@@ -143,6 +143,7 @@ const AboutPage = () => (
                                 
                                 className ="experience"
                                 buttonLabel="Baylor College of Medicine" 
+                                ModalSubtitle="May 2018 - August 2018 "
                                 ModalTitle="Lab Assistant in the Bissig Lab"
                                 ModalText="As an assistant in Dr. Karl Dimiter Bissig's cell and gene therapy lab,
                                 I helped construct synthesize gRNA constructs to target genes Agt and DDC, as part of the lab's
@@ -186,7 +187,7 @@ const AboutPage = () => (
                                 <CardImg top width="5%" src="https://github.com/michaelsprintson/me.nu/blob/tim/menu_read/static/images/menuLogo.png?raw=true" alt="Card image cap" />
                                 <CardBody>
                                 <CardTitle><h3 style={{textAlign: "left"}}>Me.nu</h3></CardTitle>
-                                <CardSubtitle><h6 style={{marginTop:0}}>HackRice 9 — First Place Overall, Best Use of Data Science</h6></CardSubtitle>
+                                <CardSubtitle><h6 style={{marginTop:0}}> <i>HackRice 9 — First Place Overall, Best Use of Data Science</i></h6></CardSubtitle>
                                 <CardText>Using a predictive model that draws from existing reviews on Yelp and Google, as well as
                                         your own preferences and past meals to provide optimal menu reccomendations at any restuarant. Boasts an 
                                         easy to use interface that uses OCR via Google Vision to parse menus. 
@@ -201,8 +202,8 @@ const AboutPage = () => (
                                 <CardBody>
                                 <CardTitle><h3 style={{textAlign: "left"}}>R.C.E. Analytics</h3></CardTitle>
                                 <CardSubtitle><h6 style={{marginTop:0}}>Rice Datathon 2020 — First Place Overall</h6></CardSubtitle>
-                                <CardText>A data pipeline and presentation that reveals key statistics about Rice's Course Evaluation (RCE) Data to students, professors, and the administration. 
-                                        Implementing a Naive Bayesian Classifier to gauge student happiness and effectiveness of courses, orders course comments
+                                <CardText>A data pipeline that reveals key statistics about Rice's course evaluation (RCE) data.
+                                        Implements a Naive Bayesian Classifier to gauge levels of student happiness and course effectiveness, orders course comments
                                         by helpfullness, and reveals the most influential aspects of a curriculum to the professors.
                                 </CardText>
                                 <Button href="https://github.com/colinbking/riceDatathon2020" target="_blank">Explore on GitHub</Button>
@@ -216,7 +217,7 @@ const AboutPage = () => (
                                 <CardTitle><h3 style={{textAlign: "left"}}>Aware</h3></CardTitle>
                                 <CardSubtitle><h6 style={{marginTop:0}}>PennApps XX</h6></CardSubtitle>
                                 <CardText>Protecting drivers and reducing unnecessary accidents by alerting drivers of nearby drivers' intentions. 
-                                        Respond and send requests to change lanes, pass slow cars, merge, and more, with a hands free interface using
+                                        Allows users to send and respond to requests to change lanes, pass other cars, merge into other lanes, and more, with a hands free interface using
                                         speech to text technology.
                                         </CardText>
                                 <Button href="https://github.com/colinbking/aware"  target="_blank">Explore on Github</Button>
@@ -234,7 +235,6 @@ const AboutPage = () => (
         <div padding="100px">
                 <h1> Skills</h1>
                 <div>
-                        <p>
                         <Row>
                         <Col sm={{ size: 'auto', offset: 3 }} >
                                 <Row><h3>Python</h3></Row>
@@ -254,7 +254,6 @@ const AboutPage = () => (
                         </Col>  
                         </Row>
 
-                        </p>
                 </div>
         </div>
         <hr></hr>
@@ -263,7 +262,13 @@ const AboutPage = () => (
             {/* Other Activities  */}
         <div>
         <h2> Other Activities</h2>
-
+                
+                        <Row style={{textAlign:"center"}}>
+                        <Col sm={{ size: 'auto'}} >
+                        <h3>President of <a href="http://www.ricesase.com" target="_blank"> Rice SASE </a> </h3>
+                        </Col>
+                        </Row>
+                        
         </div>
         <hr></hr>
         <br></br>

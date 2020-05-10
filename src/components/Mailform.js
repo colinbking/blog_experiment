@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button, Card, CardBody, CardTitle, Form, Row, Col} from 'reactstrap';
+import { Button, Card, CardBody, CardTitle, Row, Col} from 'reactstrap';
 
 export default class EmailListForm extends React.Component {
               
@@ -13,9 +13,9 @@ export default class EmailListForm extends React.Component {
                                         Newsletter
                                 </CardTitle>
                                 <h3> Stay in touch </h3>
-                                <Form className="text-center"
-                                        method="post"
-                                        name="contact"
+                                <form className="text-center"
+                                        method="POST"
+                                        name="Newsletter-Form"
                                         data-netlify="true"
                                         netlify-honeypot="bot-field">
 
@@ -34,7 +34,7 @@ export default class EmailListForm extends React.Component {
                                         </Row>
                                         
                                         
-                                </Form>
+                                </form>
                         </CardBody>
         </Card>
                   
