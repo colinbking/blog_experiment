@@ -198,7 +198,7 @@ const AboutPage = () => (
                         </Col>
                         <Col sm="4">
                         <Card>
-                                <CardImg top width="5%" src="http://localhost:8000/static/4cfdf9e1086d6629d25281e42121a11b/df997/test.png" alt="Card image cap" />
+                                <CardImg top width="5%" src="https://i.imgur.com/dhHwwGA.png" alt="Card image cap" />
                                 <CardBody>
                                 <CardTitle><h3 style={{textAlign: "left"}}>R.C.E. Analytics</h3></CardTitle>
                                 <CardSubtitle><h6 style={{marginTop:0}}>Rice Datathon 2020 — First Place Overall</h6></CardSubtitle>
@@ -263,7 +263,7 @@ const AboutPage = () => (
         <div>
         <h2> Other Activities</h2>
                 
-                        <Row style={{textAlign:"center"}}>
+                        <Row style={{justifyContent:"center"}}>
                         <Col sm={{ size: 'auto'}} >
                         <h3>President of <a href="http://www.ricesase.com" target="_blank"> Rice SASE </a> </h3>
                         </Col>

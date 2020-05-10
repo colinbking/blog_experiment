@@ -14,12 +14,12 @@ module.exports = {
               path: `${__dirname}/src/images`,
             },
           },
-          {
-                resolve: 'gatsby-plugin-mailchimp',
-                options: {
-                    endpoint: 'https://rice.us8.list-manage.com/subscribe/post?u=bad8fdcb1f4aa391b9d11815b&amp'
-                }              // add your MC list endpoint here; see instructions below
-          },
+        //   {
+        //         resolve: 'gatsby-plugin-mailchimp',
+        //         options: {
+        //             endpoint: 'https://rice.us8.list-manage.com/subscribe/post?u=bad8fdcb1f4aa391b9d11815b&amp'
+        //         }              // add your MC list endpoint here; see instructions below
+        //   },
           
           {
               resolve: `gatsby-source-filesystem`,
